@@ -5,45 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/bgs5xty.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    
+    <title>Sign-in/Sign-up</title>
 </head>
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png" />
-        </div>
+
     </header>
-    <main class="auth-main">
-        <div class="left">
-            <div class="auth-container">
-                <form id="sign-in">
-                    <h3>Sign In</h3>
-                    <label>Email </label><input type="email" name="email" id="sign-in-email"/>
-                    <label>Password </label><input type="password" name="password" id="sign-in-password"/>
-                    <button>Submit</button>
-                </form>
-            </div>
-        </div>
-        <div class="right">
-            <div class="auth-container">
-                <form id='sign-up'>
-                    <h3>Sign Up</h3>
-                    <label>Email </label><input type='email' name='email' id="sign-up-email" />
-                    <label>Password </label><input type='password' name='password' id="sign-up-password" />
-                    <button>Submit</button>
-                </form>
-            </div>
-        </div>
+    <main>
+        <section class="signIn-section">
+            <h2>Sign-in</h2>
+            <form id="signIn-form">
+              <label for="inEmail">Email</label>
+                <input type="email" class="" name="inEmail">
+              <label for="inPassword">Password</label>
+                <input type="password" class="" name="inPassword">
+              <button type="submit" form="signIn-form">Submit</button>
+            </form>
+        </section>
+          
+        <section class="signUp-section">
+            <h2>Sign-up</h2>
+            <form id="signUp-form">
+              <label for="upEmail">Email</label>
+                <input type="email" class="" id="upEmail-input" name="upEmail">
+              <label for="upPassword">Password</label>
+                <input type="password" class="" id="upPassword-input" name="upPassword">
+              <button type="submit" form="signUp-form" id="signUp-submit">Submit</button>
+            </form>
+        </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+
     </footer>
+
     <script type="module" src="./app.js"></script>
 </body>
 

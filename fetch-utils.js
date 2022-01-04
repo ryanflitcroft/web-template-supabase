@@ -14,13 +14,13 @@ export async function checkAuth() {
     if (!user) location.replace('../'); 
 }
 
-export async function redirectIfLoggedIn() {
+export async function redirect() {
     if (await getUser()) {
-        location.replace('./other-page');
+        location.replace('./main');
     }
 }
 
-export async function signupUser(email, password){
+export async function signUpUser(email, password){
     const response = await client.auth.signUp({ email, password });
     
     return response.user;
