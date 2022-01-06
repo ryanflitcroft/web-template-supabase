@@ -17,18 +17,18 @@ git checkout -b workOnANewBranch
 ### HTML SETUP
 
 ```html
-<header>
-</header>
+<section>
+</section>
 ```
 
 ```html
-<main>
-</main>
+<section>
+</section>
 ```
 
 ```html
-<footer>
-</footer>
+<section>
+</section>
 ```
 
 ### JS SETUP
