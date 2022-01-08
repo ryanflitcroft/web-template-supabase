@@ -14,7 +14,8 @@ signInForm.addEventListener('submit', async(e) => {
 
     const user = await signInUser(email, password);
 
-    signInForm.reset();
+    if (user) signInForm.reset();
+    else alert('Try that again!');
 
     if (user) {
         redirect();
@@ -30,11 +31,14 @@ signUpForm.addEventListener('submit', async(e) => {
 
     const email = data.get('upEmail');
     const password = data.get('upPassword');
-    // console.log(email, password);
+
+    if (password.length < 6) {
+        alert('Password must contain 6 or more characters.')
+    }
 
     const user = await signUpUser(email, password);
 
-    signUpForm.reset();
+    if (user) signUpForm.reset();
 
     if (user) {
         redirect();
